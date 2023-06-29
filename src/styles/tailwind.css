@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full bg-white;
+  }
+
+  body {
+    font-family: 'Roboto';
+    @apply h-full overflow-hidden;
+  }
+  h1 {
+    @apply text-2xl md:text-[32px] lg:text-4xl leading-[40px] -tracking-normal;
+  }
+  h2 {
+    @apply text-2xl -tracking-normal;
+  }
+  h3 {
+    @apply text-base leading-[20px] -tracking-normal;
+  }
+  h4 {
+    @apply text-sm leading-[16px] -tracking-normal;
+  }
+  button {
+    @apply text-xs leading-6 font-bold tracking-[0.04em];
+  }
+  svg {
+    @apply stroke-inherit;
+  }
+  #root {
+    @apply h-full;
+  }
+  .mapboxgl-marker .mapboxgl-marker-anchor-center {
+    @apply hidden;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(229, 231, 235, 1);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 1);
+    border-radius: 30px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 1);
+  }
+
+  .scroll::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  .scroll::-webkit-scrollbar-track {
+    background: rgba(229, 231, 235, 1);
+  }
+
+  /* Handle */
+  .scroll::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 1);
+    border-radius: 30px;
+  }
+
+  /* Handle on hover */
+  .scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 1);
+  }
+
+  .scroll-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .table-scroll-start {
+    box-shadow: inset -5px 0 7px 0 rgba(0, 0, 0, 0.15);
+  }
+  .table-scroll-middle {
+    box-shadow: inset 0 0 14px 0 rgba(0, 0, 0, 0.3);
+  }
+  .table-scroll-end {
+    box-shadow: inset 5px 0 7px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+@layer components {
+  /* SIZES */
+  .size-40 {
+    @apply h-10 w-10;
+  }
+  .size-24 {
+    @apply h-6 w-6;
+  }
+  .size-16 {
+    @apply h-4 w-4;
+  }
+
+  /* TYPOGRAPHY */
+  .typography-label {
+    @apply text-xs;
+  }
+
+  .typography-body {
+    @apply text-sm md:text-base;
+  }
+
+  .typography-button {
+    @apply text-xs leading-6 font-bold tracking-[0.04em];
+  }
+
+  .typography-caption {
+    @apply text-[13px] leading-4;
+  }
+
+  .stacking-container {
+    @apply grid grid-cols-[40px_1fr] sm:grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] lg:grid-cols-[160px_1fr];
+  }
+
+  .stacking-floor {
+    @apply h-40 border border-gray-blue-2 bg-white hover:border-gray-blue-7 rounded;
+  }
+
+  .react-select__input {
+    @apply bg-red border;
+  }
+
+  .css-1s2u09g-control {
+    @apply group relative w-full bg-gray-red border  rounded cursor-default outline-none p-2 flex gap-2 pr-9;
+  }
+
+  .mapboxgl-popup-content {
+    @apply bg-black;
+  }
+
+  .rdp__today {
+    @apply !text-blue-4;
+  }
+  .rdp__selected {
+    @apply !bg-blue-4 !text-white !rounded;
+  }
+  .rdp__disabled {
+    @apply !opacity-70;
+  }
+}
